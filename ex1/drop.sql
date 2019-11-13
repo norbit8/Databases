@@ -1,2 +1,12 @@
-DROP TABLE "pilot" cascade;
-DROP TABLE "aeroplane";
+DROP TABLE Regular_reservations;
+DROP TABLE Vip_reservations;
+DROP TABLE Flying;
+DROP TABLE Pilot;
+DROP TABLE Vip_ticket;
+DROP TABLE Regular_ticket;
+DROP TABLE Flight_ticket;
+DROP TABLE Flight;
+DROP TABLE Regular;
+DROP TABLE Vip;
+DROP TABLE Aeroplane;
+DROP TABLE Customer;
