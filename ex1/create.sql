@@ -45,8 +45,6 @@ CREATE TABLE Flight_ticket
     PRIMARY KEY (row_num, seat_char, f_num)
 );
 
-INSERT INTO Flight_ticket VALUES(20,'A',3, 5);
-
 CREATE TABLE Regular_ticket
 (
     row_num int,
