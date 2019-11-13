@@ -38,12 +38,14 @@ CREATE TABLE Flight
 
 CREATE TABLE Flight_ticket
 (
-    row_num int,
-    seat_char varchar(1),
+    row_num int check(row_num >= 1 AND row_num <= 20),
+    seat_char varchar(1) check(ASCII(seat_char) >= 65 AND ASCII(seat_char) <= 74),
     f_num int,
     price int NOT NULL CHECK(price > 0),
     PRIMARY KEY (row_num, seat_char, f_num)
 );
+
+INSERT INTO Flight_ticket VALUES(20,'A',3, 5);
 
 CREATE TABLE Regular_ticket
 (
