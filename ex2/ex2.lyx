@@ -1,0 +1,889 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding cp1255
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+מסדי נתונים - תרגיל
+\family roman
+\series medium
+\shape up
+\size largest
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\numeric off
+:
+\end_layout
+
+\begin_layout Author
+מגיש: יואב לוי
+\family roman
+\series medium
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+314963257
+\end_layout
+
+\begin_layout Paragraph*
+שאלה א 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $\pi_{\text{pid}}\left(\sigma_{\text{vdate}="11-11-11"}\left(\text{Visit}\right)\right)$
+\end_inset
+
+ .
+\numeric on
+1
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $\pi_{\text{pname}}\left(\sigma_{\text{fee}=0\land\text{dname}="\text{Avi Cohen"}}\left(\text{Visit}\Join\text{Doctor}\Join\text{Patient}\right)\right)$
+\end_inset
+
+ .
+\numeric on
+2
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $\pi_{\text{pid}\text{, }\text{pname}}\left(\sigma_{\text{specialty="orthopedist"}\lor\text{specialty}="\text{pediatrician"}}\left(\text{Visit}\Join\text{Doctor}\Join\text{Patient}\right)\right)$
+\end_inset
+
+ .
+\numeric on
+3
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $\pi_{\text{pid, did}}\left(\text{Patient}\times\text{Doctor}\right)-\pi_{\text{pid, did}}\left(\text{Visit}\right)$
+\end_inset
+
+ .
+\numeric on
+4
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $\pi_{\text{dname}}\left(\sigma_{\text{specialty}="\text{pediatrician"}}\left(\text{Doctor}\Join\left(\pi_{\text{pid,did}}(\text{Visit})\div\pi_{\text{pid}}\left(\sigma_{\text{gender}=\text{"M"}\land\text{\ensuremath{\text{bmi>30}}}}\left(\text{Patient}\right)\right)\right)\right)\right)$
+\end_inset
+
+ .
+\numeric on
+5
+\end_layout
+
+\begin_layout Standard
+\align left
+.
+\numeric on
+6
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\pi_{\text{did1}}\Bigg(\sigma_{\text{did1=did2=did3\ensuremath{\land\forall1\leq i<j\leq3:\ \text{pidi\ensuremath{\neq\text{pidj}}}}}}\Bigg(
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(\rho_{\text{v1(did1,pid1,vdate1,fee1,pname1,bmi1,gender1)}}\left(\sigma_{\text{bmi>30}}\left(\text{Visit}\Join\text{Patient}\right)\right)\right)\times
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(\rho_{\text{v2(did2,pid2,vdate2,fee2,pname2,bmi2,gender2)}}\left(\sigma_{\text{bmi>30}}\left(\text{Visit}\Join\text{Patient}\right)\right)\right)\times
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(\rho_{\text{v3(did3,pid3,vdate3,fee3,pname3,bmi3,gender3)}}\left(\sigma_{\text{bmi>30}}\left(\text{Visit}\Join\text{Patient}\right)\right)\right)\Bigg)\Bigg)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+-
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\pi_{\text{did1}}\Bigg(\sigma_{\text{did1=did2=did3=did4\ensuremath{\land\forall1\leq i<j\leq4:\ \text{pidi\ensuremath{\neq\text{pidj}}}}}}\Bigg(
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(\rho_{\text{v1(did1,pid1,vdate1,fee1,pname1,bmi1,gender1)}}\left(\sigma_{\text{bmi>30}}\left(\text{Visit}\Join\text{Patient}\right)\right)\right)\times
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(\rho_{\text{v2(did2,pid2,vdate2,fee2,pname2,bmi2,gender2)}}\left(\sigma_{\text{bmi>30}}\left(\text{Visit}\Join\text{Patient}\right)\right)\right)\times
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(\rho_{\text{v3(did3,pid3,vdate3,fee3,pname3,bmi3,gender3)}}\left(\sigma_{\text{bmi>30}}\left(\text{Visit}\Join\text{Patient}\right)\right)\right)\times
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(\rho_{\text{v4(did4,pid4,vdate4,fee4,pname4,bmi4,gender4)}}\left(\sigma_{\text{bmi>30}}\left(\text{Visit}\Join\text{Patient}\right)\right)\right)\Bigg)\Bigg)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+בהצגה קומפקטית יותר:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נגדיר,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+K_{i}\coloneqq\rho_{\text{v\_i(did\_i,pid\_i,vdate\_i,fee\_i,pname\_i,bmi\_i,gender\_i)}}\left(\sigma_{\text{bmi>30}}\left(\text{Visit}\Join\text{Patient}\right)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כעת,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\pi_{\text{did\_1}}\left(\sigma_{\text{did\_1=did\_2=did\_3\ensuremath{\land\text{\forall1\leq i<j\leq3:\ \text{pidi\ensuremath{\neq\text{pidj}}}}}}}\left(K_{1}\times K_{2}\times K_{3}\right)\right)-
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\pi_{\text{did\_1}}\left(\sigma_{\text{did\_1=did\_2=did\_3=did\_4\ensuremath{\land\text{\forall1\leq i<j\leq4:\ \text{pidi\ensuremath{\neq\text{pidj}}}}}}}\left(K_{1}\times K_{2}\times K_{3}\times K_{4}\right)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+\color magenta
+הערה:
+\bar default
+ בדקתי את השאילתות שכתבתי על-ידי 
+\begin_inset Formula $\text{RelaX Calculator}$
+\end_inset
+
+ עם ה-
+\begin_inset Formula $\text{Data-set}$
+\end_inset
+
+ הבא:
+\end_layout
+
+\begin_layout Standard
+
+\color magenta
+\begin_inset Formula 
+\[
+gist:05d7811faaabddd8ae3e771bf6813768
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+שאלה ב
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\numeric on
+1
+\numeric off
+.
+ 
+\series bold
+הביטויים שקולים
+\series default
+, 
+\end_layout
+
+\begin_layout Standard
+הוכחה:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(a,d)\in\pi_{\text{A}}\text{R}\times\pi_{\text{D}}\text{T}\text{\ensuremath{\iff}}\exists b,c,e\quad(a,b,c)\text{\ensuremath{\in}}\text{R}\land(d,e)\in\text{T}\iff(a,d)\text{∈}\pi_{\text{A, D}}\left(\text{R}\times\text{T}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $\blacksquare$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\numeric on
+2
+\numeric off
+.
+ הביטויים 
+\series bold
+אינם שקולים
+\series default
+, אך יש הכלה באופן הבא:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\pi_{\text{A}}\left(\text{R}\div\text{S}\right)\subset\left(\pi_{\text{A,C}}\text{R}\right)\div\text{S}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ראשית אביא דוגמא נגדית לשקילות:
+\end_layout
+
+\begin_layout Standard
+עבור הטבלה 
+\series bold
+
+\begin_inset Formula $\text{S}$
+\end_inset
+
+
+\series default
+: 
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\bar under
+C
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\numeric on
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\numeric on
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+ ועבור הטבלה
+\series bold
+ 
+\begin_inset Formula $:\text{R}$
+\end_inset
+
+
+\series default
+ 
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\bar under
+A
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\bar under
+B
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\bar under
+C
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\numeric on
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\numeric on
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\numeric on
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\numeric on
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\numeric on
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\numeric on
+6
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\numeric on
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\numeric on
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\numeric on
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\numeric on
+80
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\numeric on
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\numeric on
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+עבור השאילתה 
+\begin_inset Formula $\pi_{\text{A}}\left(\text{R}\div\text{S}\right)$
+\end_inset
+
+ נקבל:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\bar under
+A
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+לעומת זאת, עבור השאילתה 
+\begin_inset Formula $\left(\pi_{\text{A,C}}\text{R}\right)\div\text{S}$
+\end_inset
+
+ נקבל:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\bar under
+A
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\numeric on
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+הוכחת ההכלה:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(a)\in\pi_{\text{A}}\left(\text{R}\div\text{S}\right)\iff\exists b\ (a,b)\in\text{\left(\text{R}\div\text{S}\right)\ensuremath{\iff\exists b\ \forall c\in\text{S}\ (a,b,c)\in\text{R}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(\text{\ensuremath{\blacksmiley}})\Downarrow
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\forall c\in\text{S}\ \exists b\ (a,b,c)\in\text{R\ensuremath{\iff(a)\in\left(\pi_{\text{A,C}}\text{R}\right)\div\text{S}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+)
+\series bold
+
+\begin_inset Formula $\blacksmiley$
+\end_inset
+
+
+\series default
+( - נשים לב כי 
+\begin_inset Formula $\exists b\ \forall c\in\text{S}\ (a,b,c)\in\text{R}$
+\end_inset
+
+ הוא מקרה פרטי של 
+\begin_inset Formula $\forall c\in\text{S}\ \exists b\ (a,b,c)\in\text{R}$
+\end_inset
+
+, ולכן ההכלה.
+\end_layout
+
+\end_body
+\end_document
